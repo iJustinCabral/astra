@@ -8,17 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		E376C0B2296138F800547BDA /* AstraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376C0B1296138F800547BDA /* AstraApp.swift */; };
-		E376C0B4296138F800547BDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376C0B3296138F800547BDA /* ContentView.swift */; };
 		E376C0B6296138F900547BDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E376C0B5296138F900547BDA /* Assets.xcassets */; };
 		E376C0B9296138F900547BDA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E376C0B8296138F900547BDA /* Preview Assets.xcassets */; };
+		E376C0C0296139AB00547BDA /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376C0BF296139AB00547BDA /* MainView.swift */; };
+		E376C0C229613A5C00547BDA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376C0C129613A5C00547BDA /* HomeView.swift */; };
+		E376C0C429613A7300547BDA /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376C0C329613A7300547BDA /* PhotosView.swift */; };
+		E376C0CA29613EC200547BDA /* AstraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376C0C929613EC200547BDA /* AstraService.swift */; };
+		E376C0CD29613F6100547BDA /* AstraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376C0CC29613F6100547BDA /* AstraModel.swift */; };
+		E376C0CF296140A400547BDA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376C0CE296140A400547BDA /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E376C0AE296138F800547BDA /* Astra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E376C0B1296138F800547BDA /* AstraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstraApp.swift; sourceTree = "<group>"; };
-		E376C0B3296138F800547BDA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E376C0B5296138F900547BDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E376C0B8296138F900547BDA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E376C0BF296139AB00547BDA /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		E376C0C129613A5C00547BDA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E376C0C329613A7300547BDA /* PhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
+		E376C0C929613EC200547BDA /* AstraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstraService.swift; sourceTree = "<group>"; };
+		E376C0CC29613F6100547BDA /* AstraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstraModel.swift; sourceTree = "<group>"; };
+		E376C0CE296140A400547BDA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +61,11 @@
 		E376C0B0296138F800547BDA /* Astra */ = {
 			isa = PBXGroup;
 			children = (
-				E376C0B1296138F800547BDA /* AstraApp.swift */,
-				E376C0B3296138F800547BDA /* ContentView.swift */,
+				E376C0CB29613F4800547BDA /* Model */,
+				E376C0C829613D0800547BDA /* Base */,
+				E376C0C729613CF900547BDA /* Views */,
+				E376C0C629613CF100547BDA /* ViewModels */,
+				E376C0C529613CE700547BDA /* Service */,
 				E376C0B5296138F900547BDA /* Assets.xcassets */,
 				E376C0B7296138F900547BDA /* Preview Content */,
 			);
@@ -65,6 +78,48 @@
 				E376C0B8296138F900547BDA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E376C0C529613CE700547BDA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E376C0C929613EC200547BDA /* AstraService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E376C0C629613CF100547BDA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E376C0CE296140A400547BDA /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E376C0C729613CF900547BDA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E376C0BF296139AB00547BDA /* MainView.swift */,
+				E376C0C129613A5C00547BDA /* HomeView.swift */,
+				E376C0C329613A7300547BDA /* PhotosView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E376C0C829613D0800547BDA /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E376C0B1296138F800547BDA /* AstraApp.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		E376C0CB29613F4800547BDA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E376C0CC29613F6100547BDA /* AstraModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +192,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E376C0B4296138F800547BDA /* ContentView.swift in Sources */,
+				E376C0C229613A5C00547BDA /* HomeView.swift in Sources */,
+				E376C0C429613A7300547BDA /* PhotosView.swift in Sources */,
+				E376C0CF296140A400547BDA /* HomeViewModel.swift in Sources */,
+				E376C0C0296139AB00547BDA /* MainView.swift in Sources */,
+				E376C0CD29613F6100547BDA /* AstraModel.swift in Sources */,
+				E376C0CA29613EC200547BDA /* AstraService.swift in Sources */,
 				E376C0B2296138F800547BDA /* AstraApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

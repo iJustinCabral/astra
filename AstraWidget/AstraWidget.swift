@@ -39,18 +39,34 @@ final class AstraService: Service {
     
 }
 
+struct NetworkImage: View {
+
+  public let url: URL?
+
+  var body: some View {
+
+    Group {
+     if let url = url, let imageData = try? Data(contentsOf: url),
+       let uiImage = UIImage(data: imageData) {
+
+       Image(uiImage: uiImage)
+         .resizable()
+         .aspectRatio(contentMode: .fill)
+      }
+      else {
+       Image("placeholder-image")
+      }
+    }
+  }
+
+}
+
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date())
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        
-        let service = AstraService()
-        
-        Task {
-            let photo = try await service.fetchStarPhoto()
-        }
         
         let entry = SimpleEntry(date: Date())
         completion(entry)
@@ -85,7 +101,13 @@ struct AstraWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
+        AsyncImage(url: URL(string: "https://go-apod.herokuapp.com/apod")) { phase in
+            if let photo = phase.image {
+                photo
+                    .resizable()
+                    .scaledToFit()
+            }
+        }
     }
 }
 

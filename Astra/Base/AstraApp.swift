@@ -8,10 +8,11 @@
 import SwiftUI
 
 @main
-struct AstraApp: App {
+struct AstraApp: App {    
     var body: some Scene {
         WindowGroup {
             MainView()
         }
     }
+
 }

@@ -16,7 +16,37 @@
 		E376C0CA29613EC200547BDA /* AstraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376C0C929613EC200547BDA /* AstraService.swift */; };
 		E376C0CD29613F6100547BDA /* AstraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376C0CC29613F6100547BDA /* AstraModel.swift */; };
 		E376C0CF296140A400547BDA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376C0CE296140A400547BDA /* HomeViewModel.swift */; };
+		E376C0D729635B0C00547BDA /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E376C0D629635B0C00547BDA /* WidgetKit.framework */; };
+		E376C0D929635B0C00547BDA /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E376C0D829635B0C00547BDA /* SwiftUI.framework */; };
+		E376C0DC29635B0C00547BDA /* AstraWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376C0DB29635B0C00547BDA /* AstraWidgetBundle.swift */; };
+		E376C0DE29635B0C00547BDA /* AstraWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E376C0DD29635B0C00547BDA /* AstraWidget.swift */; };
+		E376C0E029635B0D00547BDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E376C0DF29635B0D00547BDA /* Assets.xcassets */; };
+		E376C0E429635B0D00547BDA /* AstraWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E376C0D429635B0C00547BDA /* AstraWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E376C0E229635B0D00547BDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E376C0A6296138F800547BDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E376C0D329635B0C00547BDA;
+			remoteInfo = AstraWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E376C0E829635B0D00547BDA /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E376C0E429635B0D00547BDA /* AstraWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E376C0AE296138F800547BDA /* Astra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Astra.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,6 +59,13 @@
 		E376C0C929613EC200547BDA /* AstraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstraService.swift; sourceTree = "<group>"; };
 		E376C0CC29613F6100547BDA /* AstraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstraModel.swift; sourceTree = "<group>"; };
 		E376C0CE296140A400547BDA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E376C0D429635B0C00547BDA /* AstraWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AstraWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E376C0D629635B0C00547BDA /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		E376C0D829635B0C00547BDA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		E376C0DB29635B0C00547BDA /* AstraWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstraWidgetBundle.swift; sourceTree = "<group>"; };
+		E376C0DD29635B0C00547BDA /* AstraWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstraWidget.swift; sourceTree = "<group>"; };
+		E376C0DF29635B0D00547BDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E376C0E129635B0D00547BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +76,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E376C0D129635B0C00547BDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E376C0D929635B0C00547BDA /* SwiftUI.framework in Frameworks */,
+				E376C0D729635B0C00547BDA /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -46,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				E376C0B0296138F800547BDA /* Astra */,
+				E376C0DA29635B0C00547BDA /* AstraWidget */,
+				E376C0D529635B0C00547BDA /* Frameworks */,
 				E376C0AF296138F800547BDA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				E376C0AE296138F800547BDA /* Astra.app */,
+				E376C0D429635B0C00547BDA /* AstraWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,6 +171,26 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E376C0D529635B0C00547BDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E376C0D629635B0C00547BDA /* WidgetKit.framework */,
+				E376C0D829635B0C00547BDA /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E376C0DA29635B0C00547BDA /* AstraWidget */ = {
+			isa = PBXGroup;
+			children = (
+				E376C0DB29635B0C00547BDA /* AstraWidgetBundle.swift */,
+				E376C0DD29635B0C00547BDA /* AstraWidget.swift */,
+				E376C0DF29635B0D00547BDA /* Assets.xcassets */,
+				E376C0E129635B0D00547BDA /* Info.plist */,
+			);
+			path = AstraWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,15 +201,34 @@
 				E376C0AA296138F800547BDA /* Sources */,
 				E376C0AB296138F800547BDA /* Frameworks */,
 				E376C0AC296138F800547BDA /* Resources */,
+				E376C0E829635B0D00547BDA /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E376C0E329635B0D00547BDA /* PBXTargetDependency */,
 			);
 			name = Astra;
 			productName = Astra;
 			productReference = E376C0AE296138F800547BDA /* Astra.app */;
 			productType = "com.apple.product-type.application";
+		};
+		E376C0D329635B0C00547BDA /* AstraWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E376C0E529635B0D00547BDA /* Build configuration list for PBXNativeTarget "AstraWidgetExtension" */;
+			buildPhases = (
+				E376C0D029635B0C00547BDA /* Sources */,
+				E376C0D129635B0C00547BDA /* Frameworks */,
+				E376C0D229635B0C00547BDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AstraWidgetExtension;
+			productName = AstraWidgetExtension;
+			productReference = E376C0D429635B0C00547BDA /* AstraWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -153,6 +241,9 @@
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					E376C0AD296138F800547BDA = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					E376C0D329635B0C00547BDA = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
@@ -171,6 +262,7 @@
 			projectRoot = "";
 			targets = (
 				E376C0AD296138F800547BDA /* Astra */,
+				E376C0D329635B0C00547BDA /* AstraWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -182,6 +274,14 @@
 			files = (
 				E376C0B9296138F900547BDA /* Preview Assets.xcassets in Resources */,
 				E376C0B6296138F900547BDA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E376C0D229635B0C00547BDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E376C0E029635B0D00547BDA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +302,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E376C0D029635B0C00547BDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E376C0DC29635B0C00547BDA /* AstraWidgetBundle.swift in Sources */,
+				E376C0DE29635B0C00547BDA /* AstraWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E376C0E329635B0D00547BDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E376C0D329635B0C00547BDA /* AstraWidgetExtension */;
+			targetProxy = E376C0E229635B0D00547BDA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E376C0BA296138F900547BDA /* Debug */ = {
@@ -322,6 +439,7 @@
 		E376C0BD296138F900547BDA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -351,6 +469,7 @@
 		E376C0BE296138F900547BDA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -377,6 +496,60 @@
 			};
 			name = Release;
 		};
+		E376C0E629635B0D00547BDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 49Q63X4R6X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AstraWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AstraWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = justin.cabral.Astra.AstraWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E376C0E729635B0D00547BDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 49Q63X4R6X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AstraWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AstraWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = justin.cabral.Astra.AstraWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -394,6 +567,15 @@
 			buildConfigurations = (
 				E376C0BD296138F900547BDA /* Debug */,
 				E376C0BE296138F900547BDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E376C0E529635B0D00547BDA /* Build configuration list for PBXNativeTarget "AstraWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E376C0E629635B0D00547BDA /* Debug */,
+				E376C0E729635B0D00547BDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

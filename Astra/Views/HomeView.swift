@@ -18,13 +18,15 @@ struct HomeView: View {
     // Controls the sheet view
     @State private var isShowingSheet = false
     
+    let defaults = UserDefaults.standard
+    
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors:colorScheme == .dark ? [] : [.indigo, .black]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
-                HeaderBar()
+                HeaderBar(photo: viewModel.starPhoto)
                 switch viewModel.state {
                 case .success(let starPhoto):
                     StarPhotoImageView(photo: starPhoto)
@@ -34,36 +36,7 @@ struct HomeView: View {
                         .foregroundColor(colorScheme == .dark ? .primary : .white)
                         .fontWeight(.black)
                     
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            isShowingSheet.toggle()
-                        }, label: {
-                            Text("Learn More")
-                                .padding()
-                                .background(.ultraThinMaterial)
-                                .foregroundColor(.white)
-                                .cornerRadius(12)
-                                .font(.title2)
-                                .fontWeight(.bold)
-                        })
-                        
-                        Spacer()
-                        
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(.ultraThinMaterial)
-                            .frame(width: 60, height: 58)
-                            .overlay(
-                                Button(action: {}) {
-                                    Image(systemName: "star.fill")
-                                        .resizable()
-                                        .frame(width: 30, height: 30)
-                                        .foregroundColor(.white)
-                                }
-                            )
-                        
-                        Spacer()
-                    }
+                    BottomBar()
                     
                 case .loading:
                     VStack {
@@ -100,7 +73,7 @@ struct HomeView: View {
     
     // Button still needs be converted into a ShareLink
     @ViewBuilder
-    func HeaderBar() -> some View {
+    func HeaderBar(photo: StarPhoto) -> some View {
         HStack {
             Text("Astra")
                 .font(.largeTitle)
@@ -109,7 +82,8 @@ struct HomeView: View {
             
             Spacer()
             
-            Button(action: {}, label: {
+            
+            ShareLink(item: photo.explanation){
                 RoundedRectangle(cornerRadius: 8)
                     .fill(.ultraThinMaterial)
                     .frame(width: 40, height: 40)
@@ -121,7 +95,7 @@ struct HomeView: View {
                             .frame(width: 20, height: 20)
                             .foregroundColor(colorScheme == .dark ? .primary : .white)
                     )
-            })
+            }
         }.padding()
     }
     
@@ -139,6 +113,28 @@ struct HomeView: View {
             }
         }
     }
+    
+    @ViewBuilder
+    func BottomBar() -> some View {
+        HStack {
+            Spacer()
+            Button(action: {
+                isShowingSheet.toggle()
+            }, label: {
+                Text("Learn More")
+                    .padding()
+                    .background(.ultraThinMaterial)
+                    .foregroundColor(.white)
+                    .cornerRadius(12)
+                    .font(.title2)
+                    .fontWeight(.bold)
+            })
+                        
+            Spacer()
+        }
+        
+    }
+
 }
 
 struct HomeView_Previews: PreviewProvider {
